@@ -97,5 +97,41 @@
 
   body {
     @apply bg-background text-foreground;
+    font-family: "Open Sans", sans-serif;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Montserrat", sans-serif;
+  }
+}
+
+@layer utilities {
+  .photo-3d {
+    perspective: 1000px;
+    transform-style: preserve-3d;
+  }
+
+  .photo-3d:hover .photo-inner {
+    transform: rotateX(10deg) rotateY(10deg) scale(1.05);
+  }
+
+  .photo-inner {
+    transition: transform 0.3s ease-out;
+    transform-style: preserve-3d;
+  }
+
+  .gradient-bg {
+    background: linear-gradient(135deg, #ff6b6b 0%, #45b7d1 50%, #9b59b6 100%);
+  }
+
+  .glass-effect {
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
   }
 }
